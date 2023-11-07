@@ -1,9 +1,9 @@
 <?php
 
-namespace hyperia\security\tests\headers;
+namespace shyevsa\security\tests\headers;
 
-use hyperia\security\headers\XssProtection;
-use hyperia\security\tests\TestCase;
+use shyevsa\security\headers\XssProtection;
+use shyevsa\security\tests\TestCase;
 
 class XssProtectionTest extends TestCase
 {

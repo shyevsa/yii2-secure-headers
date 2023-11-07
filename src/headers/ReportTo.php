@@ -1,12 +1,12 @@
 <?php
 
-namespace hyperia\security\headers;
+namespace shyevsa\security\headers;
 
 class ReportTo implements PolicyInterface
 {
     private $groups;
 
-    public function __construct(array $groups)
+    public function __construct(?array $groups)
     {
         $this->groups = $groups;
     }
@@ -23,6 +23,9 @@ class ReportTo implements PolicyInterface
 
     public function isValid(): bool
     {
+        if ($this->groups === null) {
+            return false;
+        }
         return true;
     }
 }

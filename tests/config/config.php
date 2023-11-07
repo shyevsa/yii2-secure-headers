@@ -9,7 +9,7 @@ return [
     ],
     'components' => [
         'headers' => [
-            'class' => '\hyperia\security\Headers',
+            'class' => '\shyevsa\security\Headers',
             'upgradeInsecureRequests' => true,
             'blockAllMixedContent' => true,
             'strictTransportSecurity' => [

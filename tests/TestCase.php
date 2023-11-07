@@ -1,6 +1,6 @@
 <?php
 
-namespace hyperia\security\tests;
+namespace shyevsa\security\tests;
 
 use Yii;
 use yii\helpers\ArrayHelper;

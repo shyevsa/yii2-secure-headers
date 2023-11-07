@@ -1,9 +1,9 @@
 <?php
 
-namespace hyperia\security\tests\headers;
+namespace shyevsa\security\tests\headers;
 
-use hyperia\security\headers\FeaturePolicy;
-use hyperia\security\tests\TestCase;
+use shyevsa\security\headers\FeaturePolicy;
+use shyevsa\security\tests\TestCase;
 
 class PermissionsPolicyTest extends TestCase
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace hyperia\security\headers;
+namespace shyevsa\security\headers;
 
 class StrictTransportSecurity implements PolicyInterface
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace hyperia\security\tests\headers;
+namespace shyevsa\security\tests\headers;
 
-use hyperia\security\headers\XPoweredBy;
-use hyperia\security\tests\TestCase;
+use shyevsa\security\headers\XPoweredBy;
+use shyevsa\security\tests\TestCase;
 
 class EmptyXPoweredByTest extends TestCase
 {

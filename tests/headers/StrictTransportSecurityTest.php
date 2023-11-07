@@ -1,9 +1,9 @@
 <?php
 
-namespace hyperia\security\tests\headers;
+namespace shyevsa\security\tests\headers;
 
-use hyperia\security\headers\StrictTransportSecurity;
-use hyperia\security\tests\TestCase;
+use shyevsa\security\headers\StrictTransportSecurity;
+use shyevsa\security\tests\TestCase;
 
 class StrictTransportSecurityTest extends TestCase
 {

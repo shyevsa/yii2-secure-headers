@@ -1,6 +1,8 @@
 <?php
 
-namespace hyperia\security\headers;
+namespace shyevsa\security\headers;
+
+use shyevsa\security\Dictionary;
 
 class ContentSecurityPolicy implements PolicyInterface
 {
@@ -12,25 +14,25 @@ class ContentSecurityPolicy implements PolicyInterface
     private $upgradeInsecureRequests;
     private $reportOnlyMode;
     private $defaultDirectives = [
-        'connect-src' => "'self'",
-        'font-src' => "'self'",
-        'frame-src' => "'self'",
+        'connect-src' => Dictionary::POL_SELF,
+        'font-src' => Dictionary::POL_SELF,
+        'frame-src' => Dictionary::POL_SELF,
         'img-src' => "'self' data:",
-        'manifest-src' => "'self'",
-        'object-src' => "'self'",
-        'prefetch-src' => "'self'",
+        'manifest-src' => Dictionary::POL_SELF,
+        'object-src' => Dictionary::POL_SELF,
+        'prefetch-src' => Dictionary::POL_SELF,
         'script-src' => "'self' 'unsafe-inline'",
         'style-src' => "'self' 'unsafe-inline'",
-        'media-src' => "'self'",
-        'form-action' => "'self'",
-        'worker-src' => "'self'",
+        'media-src' => Dictionary::POL_SELF,
+        'form-action' => Dictionary::POL_SELF,
+        'worker-src' => Dictionary::POL_SELF,
     ];
 
     private $defaultCsp = [
         'default-src' => "'none'"
     ];
 
-    public function __construct(array $directives, array $params, string $reportUri)
+    public function __construct(?array $directives, array $params, string $reportUri)
     {
         $this->directives = $directives;
         $this->reportUri = $reportUri;
@@ -52,6 +54,9 @@ class ContentSecurityPolicy implements PolicyInterface
         $cspDirectives = $this->buildPolicyArray();
 
         foreach ($cspDirectives as $directive => $value) {
+            if (empty($value)) {
+                continue;
+            }
             $result .= $directive . ' ' . $value . '; ';
         }
 
@@ -68,6 +73,9 @@ class ContentSecurityPolicy implements PolicyInterface
 
     public function isValid(): bool
     {
+        if ($this->directives === null) {
+            return false;
+        }
         return true;
     }
 

@@ -1,45 +1,55 @@
 {
-    "name": "hyperia/yii2-secure-headers",
-    "description": "Secure headers for your Yii2 app",
-    "keywords": ["yii2", "headers", "secure", "extension"],
-    "type": "yii2-extension",
-    "license": "MIT",
-    "support": {
-        "source": "https://github.com/hyperia-sk/yii2-secure-headers/"
+  "name": "shyevsa/yii2-secure-headers",
+  "description": "Secure headers for your Yii2 app",
+  "keywords": [
+    "yii2",
+    "headers",
+    "secure",
+    "extension"
+  ],
+  "type": "yii2-extension",
+  "license": "MIT",
+  "support": {
+    "source": "https://github.com/shyevsa/yii2-secure-headers/"
+  },
+  "authors": [
+    {
+      "name": "Sakurai Evsa",
+      "email": "sakurai.evsa@gmail.com"
     },
-    "authors": [
-        {
-            "name": "Lukas Hrdlicka",
-            "email": "lukas.hrdlicka@hyperia.sk"
-        },
-        {
-            "name": "Lukas Mestan",
-            "email": "lukas.mestan@hyperia.sk"
-        }
-    ],
-    "require": {
-        "php": ">=7.2",
-        "yiisoft/yii2": "*"
+    {
+      "name": "Lukas Hrdlicka",
+      "email": "lukas.hrdlicka@hyperia.sk"
     },
-    "require-dev": {
-        "symfony/var-dumper": "*",
-        "phpunit/phpunit": "*"
-    },
-    "autoload": {
-        "psr-4": {
-            "hyperia\\security\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "hyperia\\security\\tests\\": "tests/"
-        }
-    },
-    "minimum-stability": "stable",
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://asset-packagist.org"
-        }
-    ]
+    {
+      "name": "Lukas Mestan",
+      "email": "lukas.mestan@hyperia.sk"
+    }
+  ],
+  "require": {
+    "php": ">=7.2",
+    "ext-json": "*",
+    "yiisoft/yii2": "*"
+  },
+  "require-dev": {
+    "symfony/var-dumper": "*",
+    "phpunit/phpunit": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "shyevsa\\security\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "shyevsa\\security\\tests\\": "tests/"
+    }
+  },
+  "minimum-stability": "stable",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  ]
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace hyperia\security\headers;
+namespace shyevsa\security\headers;
 
 class PermissionsPolicy implements PolicyInterface
 {
@@ -31,7 +31,7 @@ class PermissionsPolicy implements PolicyInterface
         'xr-spatial-tracking' => "self"
     ];
 
-    public function __construct(array $directives)
+    public function __construct(?array $directives)
     {
         $this->directives = $directives;
     }
@@ -60,6 +60,9 @@ class PermissionsPolicy implements PolicyInterface
 
     public function isValid(): bool
     {
+        if ($this->directives === null) {
+            return false;
+        }
         return true;
     }
 }

@@ -1,9 +1,9 @@
 <?php
 
-namespace hyperia\security\tests\headers;
+namespace shyevsa\security\tests\headers;
 
-use hyperia\security\headers\ReferrerPolicy;
-use hyperia\security\tests\TestCase;
+use shyevsa\security\headers\ReferrerPolicy;
+use shyevsa\security\tests\TestCase;
 
 class ReferrerPolicyTest extends TestCase
 {

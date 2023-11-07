@@ -1,10 +1,11 @@
 <?php
 
-namespace hyperia\security\tests;
+namespace shyevsa\security\tests;
 
 use Yii;
 use yii\base\Application;
-use hyperia\security\Headers;
+use shyevsa\security\Headers;
+use yii\web\Response;
 
 /**
  * Headers test
@@ -26,11 +27,11 @@ class HeadersTest extends TestCase
         // run web application
         $this->mockApplication(require(__DIR__ . '/config/config.php'), 'yii\web\Application');
 
-        // trigger event
-        Yii::$app->trigger(Application::EVENT_BEFORE_REQUEST);
-
         // init extension
         $this->headers = new Headers();
+
+        // trigger event
+        Yii::$app->trigger(Response::EVENT_BEFORE_SEND);
     }
 
     /**

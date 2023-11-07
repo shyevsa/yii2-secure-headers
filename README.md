@@ -14,13 +14,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```shell
-composer require hyperia/yii2-secure-headers:"^2.0"
+composer require shyevsa/yii2-secure-headers:"^2.0"
 ```
 
 or add
 
 ```
-"hyperia/yii2-secure-headers": "^2.0"
+"shyevsa/yii2-secure-headers": "^2.0"
 ```
 
 to the require section of your composer.json.
@@ -32,7 +32,7 @@ to the require section of your composer.json.
 'components' => [
     ...
     'headers' => [
-        'class' => '\hyperia\security\Headers',
+        'class' => '\shyevsa\security\Headers',
         'upgradeInsecureRequests' => true,
         'blockAllMixedContent' => true,
         'requireSriForScript' => false,
@@ -170,4 +170,3 @@ Permissions Policy is new policy which will replace Feature Policy
 #### Additional Resources
 
 [Everything you need to know about HTTP security headers](https://blog.appcanary.com/2017/http-security-headers.html)
-
